@@ -1,0 +1,30 @@
+{
+  "id": "drive-test-1",
+  "running": false,
+  "started_at": 1720000000000,
+  "stopped_at": 1720000005120,
+  "measurements": [
+    {
+      "name": "drive_distance",
+      "encoder_path": "drive.fl.encoder",
+      "distance": 1825.0
+    },
+    {
+      "name": "turn_accuracy",
+      "target_degrees": 90.0,
+      "actual_degrees": 91.7,
+      "error_degrees": 1.7
+    },
+    {
+      "name": "voltage_drop",
+      "voltage_path": "battery.voltage",
+      "start_voltage": 13.2,
+      "minimum_voltage": 12.6,
+      "drop": 0.6
+    },
+    {
+      "name": "wheel_synchronization",
+      "maximum_encoder_delta_difference": 4.0
+    }
+  ]
+}

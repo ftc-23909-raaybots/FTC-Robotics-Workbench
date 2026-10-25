@@ -1,0 +1,30 @@
+{
+  "id": "run-2026-10-19T13-31-20-209Z",
+  "measurements": [
+    {
+      "distance": 2652.0,
+      "encoder_path": "drive.fl.encoder",
+      "name": "drive_distance"
+    },
+    {
+      "actual_degrees": 236.22265619999996,
+      "error_degrees": 146.22265619999996,
+      "name": "turn_accuracy",
+      "target_degrees": 90.0
+    },
+    {
+      "drop": 0.011691036800000276,
+      "minimum_voltage": 13.0937530382,
+      "name": "voltage_drop",
+      "start_voltage": 13.105444075,
+      "voltage_path": "battery.voltage"
+    },
+    {
+      "maximum_encoder_delta_difference": 17.0,
+      "name": "wheel_synchronization"
+    }
+  ],
+  "running": false,
+  "started_at": 1792416680210,
+  "stopped_at": 1792416686178
+}

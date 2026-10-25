@@ -1,0 +1,9 @@
+{
+  "bind_address": "0.0.0.0",
+  "port": 8765,
+  "discovery_port": 8766,
+  "history_size": 1000,
+  "stream_rate_hz": 30,
+  "measurement_directory": "measurements",
+  "dashboard_directory": "resources/dashboards"
+}

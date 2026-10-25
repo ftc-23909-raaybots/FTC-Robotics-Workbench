@@ -1,0 +1,20 @@
+{
+  "name": "Autonomous Dashboard",
+  "widgets": [
+    {
+      "type": "value",
+      "source": "subsystems.drivetrain.state",
+      "label": "Drivetrain state"
+    },
+    {
+      "type": "value",
+      "source": "subsystems.drivetrain.recovery_attempts",
+      "label": "Recovery attempts"
+    },
+    {
+      "type": "graph",
+      "source": "measurement.active",
+      "label": "Measurement recording"
+    }
+  ]
+}

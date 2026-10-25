@@ -1,0 +1,96 @@
+{
+  "name": "robot-workbench",
+  "private": true,
+  "version": "2.1.0",
+  "description": "Desktop telemetry, project editing, and management tools for FTC-style robots",
+  "author": "Robot Workbench",
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "test:simulator": "node --test simulator.test.cjs simulator-java.test.cjs onbot-api.test.cjs onbot-emulator.test.cjs robot-project.test.cjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "installer": "node scripts/build-installer.mjs"
+  },
+  "dependencies": {
+    "@codemirror/lang-java": "^6.0.2",
+    "@fontsource-variable/eb-garamond": "^5.3.0",
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource-variable/host-grotesk": "^5.3.0",
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.1",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@uiw/react-codemirror": "^4.25.12",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  },
+  "build": {
+    "appId": "com.fieldtelemetry.console",
+    "productName": "Robot Workbench",
+    "directories": {
+      "output": "../release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "dist/**/*",
+      "main.cjs",
+      "preload.cjs",
+      "simulator.cjs",
+      "simulator-api.cjs",
+      "onbot-api.cjs",
+      "onbot-emulator.cjs",
+      "robot-project.cjs",
+      "assets/app-icon.ico",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../resources/dashboards",
+        "to": "dashboards"
+      },
+      {
+        "from": "simulator-sdk/src",
+        "to": "ftc-sim-sdk-src"
+      },
+      {
+        "from": "../examples/simulator-project",
+        "to": "ftc-sim-example"
+      }
+    ],
+    "win": {
+      "icon": "assets/app-icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Robot Workbench",
+      "uninstallDisplayName": "Robot Workbench"
+    },
+    "electronDist": "node_modules/electron/dist"
+  }
+}

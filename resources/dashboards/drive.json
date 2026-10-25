@@ -1,0 +1,23 @@
+{
+  "name": "Drive Dashboard",
+  "widgets": [
+    {
+      "type": "graph",
+      "source": "motors.frontleft.velocity_ticks_per_second",
+      "label": "Front-left velocity",
+      "unit": "ticks/s"
+    },
+    {
+      "type": "graph",
+      "source": "motors.frontright.velocity_ticks_per_second",
+      "label": "Front-right velocity",
+      "unit": "ticks/s"
+    },
+    {
+      "type": "value",
+      "source": "robot.loop.duration_ms",
+      "label": "Control loop",
+      "unit": "ms"
+    }
+  ]
+}

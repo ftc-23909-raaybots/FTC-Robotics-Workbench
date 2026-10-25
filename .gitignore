@@ -1,0 +1,12 @@
+/build/
+/ui/node_modules/
+/ui/dist/
+/ui/assets/app-icon.ico
+/ui/*.tsbuildinfo
+/release/
+/package-lock.json
+/.env
+/.env.*
+!/ui/.env.example
+/examples/__pycache__/
+/ui/scripts/__pycache__/

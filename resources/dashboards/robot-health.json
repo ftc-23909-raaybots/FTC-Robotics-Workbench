@@ -1,0 +1,20 @@
+{
+  "name": "Robot Health Dashboard",
+  "widgets": [
+    {
+      "type": "value",
+      "source": "robot.state",
+      "label": "Robot state"
+    },
+    {
+      "type": "value",
+      "source": "safety.fault.count",
+      "label": "Safety faults"
+    },
+    {
+      "type": "value",
+      "source": "api.running",
+      "label": "API listener"
+    }
+  ]
+}
